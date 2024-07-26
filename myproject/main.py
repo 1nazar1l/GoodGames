@@ -69,13 +69,6 @@ def get_game_info(game_json):
 
                 names_add += 1
                 generate_game_data(name, date, author, correct_desc, filtered_min, technics, img_url, filtered_recom)
-            # print(name)
-            # print(date)
-            # print(author)
-            # print(correct_desc)
-            # print(filtered_min)
-            # print(technics)
-            # print(img_url)
 
 def get_req(item):
     allreq = []
@@ -168,15 +161,12 @@ def generate_game_data(name, date, author, correct_desc, filtered_min, technics,
     print(f'Done!!! - {name}')
 
 def update_json():
-    # Загрузка данных из JSON-файла
     with open('myproject/games.json', 'r', encoding='Utf-8') as f:
         data = json.load(f)
 
-    # Присвоение id каждому элементу в массиве games
     for i, game in enumerate(data['games']):
         game['id'] = i
 
-    # Запись обновленных данных в файл
     with open('myproject/games.json', 'w', encoding='Utf-8') as f:
         json.dump(data, f, indent=4, ensure_ascii=False)
 
@@ -194,8 +184,6 @@ def add_games(name, names_add_1, names_add_2, game_block):
         if result:
             names_add_1 += 1
             if names_add_1%2 != 0:
-                # print(name,game_block['appid'])
-                # print(names_add)
                 game_id = game_block['appid']
                 game_json = get_game_by_id(game_id)
                 for num,el in game_json.items():
@@ -217,7 +205,6 @@ def main():
     names_add_2 = 0
     for game_block in game_list:
         add_games(name, names_add_1, names_add_2, game_block)
-
 
 
 if __name__ == '__main__':
