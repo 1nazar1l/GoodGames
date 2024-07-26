@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    color: rgb(235, 235, 235);
+    font-family: "Open Sans", sans-serif;
+}
+
+.nav-link, a {
+    color:black;
+}
+
+.nav-link, a:hover {
+    color:black;
+}
+
+.navbar-brand {
+    background-color: lightgray;
+    padding: 5px 15px;
+    border-radius: 5px 15px;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url(https://img.freepik.com/premium-photo/beautiful-colorful-wallpapers-4k-high-quality_727523-1494.jpg);
+}
+
+.main {
+    padding: 100px 20px 100px 20px;
+}
+
+.card {
+    background-color: rgb(53,53,53);
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    height: fit-content;
+    margin-bottom: 30px;
+}
+
+.card .card_cont {
+    margin: 10px;
+}
+.img_block {
+    border: 2px solid grey;
+    padding: 0;
+    height: fit-content;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.img_block img {
+    width: 100%;
+}
+
+.info_block {
+    font-size: 28px;
+}
+
+.desc {
+    font-size: 24px;
+}
+
+.req_info {
+    font-size: 18px;
+}
+
+.techn {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.techn .p_block {
+    border-right: 2px solid lightgrey;
+}
+
+span {
+    color: black;
+}
+
+@media (max-width: 1024px){
+    .info_block {
+        font-size: 20px;
+    }
+    
+    .desc {
+        font-size: 18px;
+    }
+    
+    .req_info, .techn {
+        font-size: 16px;
+    }  
+}
+
+@media (max-width: 768px){
+    .info_block {
+        font-size: 32px;
+    }
+    
+    .desc {
+        font-size: 20px;
+    }
+    
+    .req_info, .techn {
+        font-size: 20px;
+    }  
+}
+
+@media (max-width: 425px){
+    .info_block {
+        font-size: 24px;
+    }
+    
+    .desc {
+        font-size: 18px;
+    }
+    
+    .techn {
+        font-size: 22px;
+    }  
+    .techn .p_block {
+        border-right: 0;
+    }
+    .req_info {
+        font-size: 18px;
+    }
+}
